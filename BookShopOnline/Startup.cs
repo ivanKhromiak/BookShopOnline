@@ -30,6 +30,10 @@ namespace BookShopOnline
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
 
+            services.AddDbContext<BookDbContext>(options =>
+                options.UseSqlServer(
+                    Configuration.GetConnectionString("DevConnection")));
+
             services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
