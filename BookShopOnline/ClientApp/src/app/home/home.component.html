@@ -1,43 +1,17 @@
 <h1>Welcome to the  Online Book Shope!</h1>
-<h1>Список книг</h1>
-<input type="button" value="Додати" class="btn btn-default"/>
-<table *ngIf="tableMode; else create" class="table table-striped">
-    <thead>
-        <tr>
-            <td>Назва</td>
-            <td>Автор</td>
-            <td>Ціна</td>
-            <td></td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let book of books">
-            <ng-template [ngIf]="book?.id != book.id" [ngIfElse]="edit">
-                <td>{{book?.name}}</td>
-                <td>{{book?.author}}</td>
-                <td>{{book?.price}}</td>
-                <td>
-                    <button class="btn btn-sm btn-primary">Змінити</button>
-                    <button class="btn btn-sm btn-danger">Видалити</button>
-                </td>
-            </ng-template>
-        </tr>
-    </tbody>
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="books">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Author</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let book of books">
+      <td>{{ book.name }}</td>
+      <td>{{ book.author }}</td>
+      <td>{{ book.price }}</td>
+    </tr>
+  </tbody>
 </table>
- 
-<!--шаблон для редактирования-->
-<ng-template #edit>
-    <td>
-        <input type="text" [(ngModel)]="book.name" class="form-control" />
-    </td>
-    <td>
-        <input type="text" [(ngModel)]="book.author" class="form-control" />
-    </td>
-    <td>
-        <input type="text" [(ngModel)]="book.price" class="form-control" />
-    </td>
-    <td>
-        <input type="button" value="Зберегти" class="btn btn-sm btn-success" />
-        <input type="button" value="Відміна" class="btn btn-sm btn-warning" />
-    </td>
-</ng-template>
