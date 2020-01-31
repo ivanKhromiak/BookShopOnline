@@ -15,7 +15,9 @@ export class HomeComponent implements OnInit {
   
   constructor(private bookService: BookService) {}
 
-  ngOnInit(){ this.loadBooks() }
+  ngOnInit(){ 
+    this.loadBooks();
+   }
 
   loadBooks(){
     this.bookService.getBooks().subscribe((result: Book[]) => {
