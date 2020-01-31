@@ -14,7 +14,7 @@ export class BookService{
     }
 
     createBook(book: Book) {
-        return this.http.post(this._url, book);
+        return this.http.post<Book>(this._url, book);
     }
 
     updateBook(book: Book) {
