@@ -31,8 +31,8 @@ export class HomeComponent implements OnInit {
             .subscribe((result: Book) => this.books.push(result));
     } else {
         this.bookService.updateBook(this.changedBook)
-            .subscribe((result: Book[]) => {
-              this.books = result;
+            .subscribe(result => {
+                this.loadBooks();
             }, error => console.error(error));
     }
     this.cancel();
