@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using BookShopOnline.Data;
@@ -52,8 +50,6 @@ namespace BookShopOnline.Controllers
         }
 
         // PUT: api/Books/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
-        // more details see https://aka.ms/RazorPagesCRUD.
         [HttpPut("{id}")]
         public async Task<IActionResult> PutBook(int id, Book book)
         {
@@ -84,8 +80,6 @@ namespace BookShopOnline.Controllers
         }
 
         // POST: api/Books
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
-        // more details see https://aka.ms/RazorPagesCRUD.
         [HttpPost]
         public async Task<ActionResult<Book>> PostBook([FromBody]Book book)
         {
