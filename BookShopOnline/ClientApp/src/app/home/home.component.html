@@ -1,12 +1,13 @@
 <h1>Welcome to the  Online Book Shop!</h1>
 <input type="button" value="Додати" class="btn btn-default" (click)="add()" />
 <table *ngIf="lookMode; else create" class='table table-striped' aria-labelledby="tableLabel">
+  <caption>The list if avalible books</caption> 
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Author</th>
-      <th>Price</th>
-      <th></th>
+      <th id = 'name'>Name</th>
+      <th id = 'author'>Author</th>
+      <th id = 'price'></th>Price</th>
+      <th id = 'empty'></th>
     </tr>
   </thead>
   <tbody>
