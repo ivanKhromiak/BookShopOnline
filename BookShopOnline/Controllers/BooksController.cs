@@ -20,10 +20,10 @@ namespace BookShopOnline.Controllers
 
             if (!_context.Books.Any())
             {
-                _context.Books.Add(new Book { Name = "Origin", Author = "Dan Brown", Price = 200 });
-                _context.Books.Add(new Book { Name = "Witcher: The Last Wish", Author = "Andrzej Sapkowski", Price = 150 });
-                _context.Books.Add(new Book { Name = "Clean Code: A Handbook of Agile Software Craftsmanship", Author = "Robert C. Martin", Price = 800 });
-                _context.Books.Add(new Book { Name = "Fight Club", Author = "Chuck Palahniuk", Price = 75 });
+                _context.Books.Add(new Book { Name = "Origin", Author = "Dan Brown", Price = 200, ImageUrl = "https://i.grenka.ua/shop/1/7/151/dzherelo_f1b.png" });
+                _context.Books.Add(new Book { Name = "Witcher: The Last Wish", Author = "Andrzej Sapkowski", Price = 150, ImageUrl = "https://images.ua.prom.st/780654541_w0_h430_vidmak-ostannye-bazhannya.jpg" });
+                _context.Books.Add(new Book { Name = "Clean Code: A Handbook of Agile Software Craftsmanship", Author = "Robert C. Martin", Price = 800, ImageUrl = "https://images-na.ssl-images-amazon.com/images/I/41jEbK-jG%2BL.jpg" });
+                _context.Books.Add(new Book { Name = "Fight Club", Author = "Chuck Palahniuk", Price = 75, ImageUrl = "https://www.bookclub.ua/images/db/goods/38368_57777.jpg" });
                 _context.SaveChanges();
             }
         }

@@ -12,5 +12,6 @@ namespace BookShopOnline.Models
         public string Author { get; set; }
         [Required]
         public decimal Price { get; set; }
+        public string ImageUrl { get; set; }
     }
 }
