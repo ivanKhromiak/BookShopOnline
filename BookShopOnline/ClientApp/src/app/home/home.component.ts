@@ -5,6 +5,7 @@ import { Book } from '../models/book'
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
+  styleUrls: ['./home.css'],
   providers: [BookService]
 })
 export class HomeComponent implements OnInit {
