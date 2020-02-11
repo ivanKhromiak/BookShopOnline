@@ -4,6 +4,7 @@
   <caption>The list if avalible books</caption> 
   <thead>
     <tr>
+      <th id = 'image'>Image</th>
       <th id = 'name'>Name</th>
       <th id = 'author'>Author</th>
       <th id = 'price'>Price</th>
@@ -13,6 +14,7 @@
   <tbody>
     <tr *ngFor="let book of books">
       <ng-template [ngIf]="book.id != changedBook.id" [ngIfElse]="edit">
+      <td> <img  class="book-image" src="{{book.imageUrl}}"></td>
       <td>{{ book.name }}</td>
       <td>{{ book.author }}</td>
       <td>{{ book.price }}</td>
